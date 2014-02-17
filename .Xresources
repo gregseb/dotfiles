@@ -1,0 +1,67 @@
+! Terminal customization
+! xterm
+! bind ctr+shift+c/v to copy/paste
+XTerm*vt100*translations:	#override	\n\
+				Shift Ctrl <KeyPress>C:	copy-selection(CLIPBOARD)	\n\
+				Shift Ctrl <KeyPress>V:	insert-selection(CLIPBOARD)	\n\
+
+!urxvt
+! scrollbar style - rxvt (default), plain (most compact), next, or xterm
+! URxvt.scrollstyle: plain
+! disable scrollbar
+URxvt.scrollBar: false
+! Add transparency
+URxvt.transparent: true
+URxvt.shading: 20
+
+! Uncomment next line to enable tabs (shift+down:creates new; shift+left/right:switch tabs; ctr+left/right:move tab)
+! URxvt.perl-ext-common:  default,tabbed
+
+! Declare font
+URxvt.font: xft:Terminus:size=10,xft:Kochi Gothic:antialias=false,xft:Baekmuk Gulim
+
+! tangoesque scheme
+*background: #111111
+*foreground: #babdb6
+! Black (not tango) + DarkGrey
+*color0:  #000000
+*color8:  #555753
+! DarkRed + Red
+*color1:  #ff6565
+*color9:  #ff8d8d
+! DarkGreen + Green
+*color2:  #93d44f
+*color10: #c8e7a8
+! DarkYellow + Yellow
+*color3:  #eab93d
+*color11: #ffc123
+! DarkBlue + Blue
+*color4:  #204a87
+*color12: #3465a4
+! DarkMagenta + Magenta
+*color5:  #ce5c00
+*color13: #f57900
+!DarkCyan + Cyan (both not tango)
+*color6:  #89b6e2
+*color14: #46a4ff
+! LightGrey + White
+*color7:  #cccccc
+*color15: #ffffff
+
+! Custom extensions
+URxvt.perl-ext:      default,url-select,font-size
+
+! Yankable urls... using urxvt-perls
+URxvt.keysym.M-u:    perl:url-select:select_next
+URxvt.url-select.launcher:   /usr/bin/firefox -new-tab
+URxvt.url-select.underline: true
+
+! Change font size on the fly
+URxvt.keysym.C-Up:     perl:font-size:increase
+URxvt.keysym.C-Down:   perl:font-size:decrease
+URxvt.keysym.C-S-Up:   perl:font-size:incglobal
+URxvt.keysym.C-S-Down: perl:font-size:decglobal
+
+! Disable default ctr+shift bindings
+URxvt.iso14755: false
+URxvt.iso14755_52: false

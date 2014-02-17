@@ -1,0 +1,4 @@
+#!/bin/bash
+# rme for rm EMacs
+# Meant for removing emacs temp files.
+rm *~

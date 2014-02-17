@@ -1,0 +1,6 @@
+#!/bin/bash
+/usr/bin/mpc clear
+#/usr/bin/kill `${cat ~/.mpd/pid}`
+TEST=$(cat ~/.mpd/pid)
+
+echo $TEST

@@ -1,0 +1,4 @@
+#!/bin/bash
+# remove all emacs backup files in the entire system
+cd /
+sudo find . | grep '~$' | sudo xargs rm

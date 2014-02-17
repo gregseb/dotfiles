@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sudo /usr/sbin/daemonize -u tunnel /usr/bin/autossh -M 2276 -nNT geomemes-hq-at
