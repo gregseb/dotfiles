@@ -2,7 +2,13 @@
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 ;(load "~/.emacs.d/nxhtml/autostart.el")
 
-; Autoload php-mode.el - Comment out next line if using Debian's php-elisp package.
+; Bind keys to windmove
+(global-set-key (kbd "C-c b")  'windmove-left)
+(global-set-key (kbd "C-c f") 'windmove-right)
+(global-set-key (kbd "C-c p")    'windmove-up)
+(global-set-key (kbd "C-c n")  'windmove-down)
+
+; Autoload php-mode.el
 (autoload 'php-mode "php-mode.el" "Php mode." t)
 ;(setq auto-mode-alist (append '(("/*.\.php[345]?$" . php-mode)) auto-mode-alist))
 
@@ -29,11 +35,16 @@
 
 (add-to-list 'auto-mode-alist '("\\.info" . conf-windows-mode))
 
-; Load erc customizations - Edit elisp/erc-custom.el before uncommenting next line.
+; Load erc customizations
 ;(load "~/.emacs.d/elisp/erc-custom.el")
 ; Require drupal-js-mode
 (require 'drupal-js-mode)
 (add-to-list 'auto-mode-alist '("\\.\\(js\\)$" . drupal-js-mode))
+
+; Setup tramp perameters
+(require 'tramp)
+(setq tramp-default-method "ssh")
+(setenv "SSH_AUTH_SOCK" (concat (getenv "HOME") "/.ssh-auth-sock"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
