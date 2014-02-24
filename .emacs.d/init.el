@@ -44,7 +44,6 @@
 ; Setup tramp perameters
 (require 'tramp)
 (setq tramp-default-method "ssh")
-(setenv "SSH_AUTH_SOCK" (concat (getenv "HOME") "/.ssh-auth-sock"))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
