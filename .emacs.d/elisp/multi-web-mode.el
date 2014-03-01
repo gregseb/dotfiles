@@ -1,1 +1,1 @@
-/home/greg/.emacs.d/multi-web-mode/multi-web-mode.el
+../multi-web-mode/multi-web-mode.el
