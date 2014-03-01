@@ -2,6 +2,9 @@
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 ;(load "~/.emacs.d/nxhtml/autostart.el")
 
+; Recolor the minibuffer prompt so it's more readable.
+(set-face-foreground 'minibuffer-prompt "#6495ed")
+
 ; Bind keys to windmove
 (global-set-key (kbd "C-c b")  'windmove-left)
 (global-set-key (kbd "C-c f") 'windmove-right)
