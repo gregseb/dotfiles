@@ -8,6 +8,12 @@
 (global-set-key (kbd "C-c p")    'windmove-up)
 (global-set-key (kbd "C-c n")  'windmove-down)
 
+; Set some document defaults.
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+(setq require-final-newline t)
+(setq js-indent-level 2)
+
 ; Autoload php-mode.el
 (autoload 'php-mode "php-mode.el" "Php mode." t)
 ;(setq auto-mode-alist (append '(("/*.\.php[345]?$" . php-mode)) auto-mode-alist))
@@ -60,6 +66,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-; Some custom options
-(setq require-final-newline nil)
