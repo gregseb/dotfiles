@@ -4,6 +4,8 @@
 
 ; Recolor the minibuffer prompt so it's more readable.
 (set-face-foreground 'minibuffer-prompt "#6495ed")
+; Uncomment the following line if comments are coming out with silly colors.  Can replace color with hex code.
+;(set-face-foreground 'font-lock-comment-face "red")
 
 ; Bind keys to windmove
 (global-set-key (kbd "C-c b")  'windmove-left)
