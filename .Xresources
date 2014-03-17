@@ -48,6 +48,9 @@ URxvt.font: xft:Terminus:size=10,xft:Kochi Gothic:antialias=false,xft:Baekmuk Gu
 *color7:  #cccccc
 *color15: #ffffff
 
+! Uncomment (and possibly alter) the next line if you must download the perl libraries manually.
+!URxvt.perl-lib: /home/greg/.local/lib/urxvt/
+
 ! Custom extensions
 URxvt.perl-ext:      default,url-select,keyboard-select,font-size
 
