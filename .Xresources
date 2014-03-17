@@ -49,12 +49,15 @@ URxvt.font: xft:Terminus:size=10,xft:Kochi Gothic:antialias=false,xft:Baekmuk Gu
 *color15: #ffffff
 
 ! Custom extensions
-URxvt.perl-ext:      default,url-select,font-size
+URxvt.perl-ext:      default,url-select,keyboard-select,font-size
 
 ! Yankable urls... using urxvt-perls
 URxvt.keysym.M-u:    perl:url-select:select_next
 URxvt.url-select.launcher:   /usr/bin/firefox -new-tab
 URxvt.url-select.underline: true
+
+! Keyboard select... using urxvt-perls
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
 
 ! Change font size on the fly
 URxvt.keysym.C-Up:     perl:font-size:increase
@@ -65,3 +68,4 @@ URxvt.keysym.C-S-Down: perl:font-size:decglobal
 ! Disable default ctr+shift bindings
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+URxvt.searchable-scrollback: false
