@@ -2,6 +2,8 @@
 (add-to-list 'load-path "~/.emacs.d/elisp/")
 ;(load "~/.emacs.d/nxhtml/autostart.el")
 
+(message "* --[ Loading my init.el ]--")
+
 ; Recolor the minibuffer prompt so it's more readable.
 (set-face-foreground 'minibuffer-prompt "#6495ed")
 ; Uncomment the following line if comments are coming out with silly colors.  Can replace color with hex code.
@@ -18,6 +20,9 @@
 (setq-default tab-width 2)
 (setq require-final-newline t)
 (setq js-indent-level 2)
+
+; Dired options
+(setq dired-listing-switches "-lah")
 
 ; Autoload php-mode.el
 (autoload 'php-mode "php-mode.el" "Php mode." t)

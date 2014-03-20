@@ -1,6 +1,7 @@
 ;;; drupal-mode.el --- major mode for Drupal coding
 
 (message "* --[ Loading my drupal-mode.el ]--")
+
 ;;;###autoload
 (define-derived-mode drupal-mode php-mode "Drupal"
   "Major mode for Drupal coding.\n\n\\{drupal-mode-map}"
