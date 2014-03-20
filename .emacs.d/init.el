@@ -23,6 +23,7 @@
 
 ; Dired options
 (setq dired-listing-switches "-lah")
+(setq wdired-allow-to-change-permissions t)
 
 ; Autoload php-mode.el
 (autoload 'php-mode "php-mode.el" "Php mode." t)
