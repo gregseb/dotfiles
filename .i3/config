@@ -150,3 +150,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# bind meta-b to switch between current and previous workspace
+bindsym $mod+b workspace back_and_forth
