@@ -5,7 +5,8 @@
 # this file and re-run i3-config-wizard(1).
 #
 
-exec --no-startup-id feh --bg-scale /home/greg/Pictures/Wallpapers/Cartographer-3d-1600x2560.jpg
+#exec --no-startup-id xss-lock -- i3lock -n -i /home/greg/Pictures/Wallpapers/rusty_lock-wallpaper-1920x1080.png
+exec --no-startup-id feh --bg-scale /home/greg/Pictures/Wallpapers/Cartographer-3d-1600x2560.png
 
 # i3 config file (v4)
 #
@@ -153,3 +154,15 @@ bar {
 
 # bind meta-b to switch between current and previous workspace
 bindsym $mod+b workspace back_and_forth
+
+# Special keys
+# Volume
+#bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+#bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+#bindsym XF86AudioMute exec amixer -q set Master toggle
+
+# Monitor
+#bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+#bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+#bindsym $mod+XF86MonBrightnessUp exec xbacklight -set 100
+#bindsym $mod+XF86MonBrightnessDown exec xbacklight -set 0
