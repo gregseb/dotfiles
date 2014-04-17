@@ -6,7 +6,7 @@
 #
 
 #exec --no-startup-id xss-lock -- i3lock -n -i /home/greg/Pictures/Wallpapers/rusty_lock-wallpaper-1920x1080.png
-exec --no-startup-id feh --bg-scale /home/greg/Pictures/Wallpapers/Cartographer-3d-1600x2560.png
+#exec --no-startup-id feh --bg-scale /home/greg/Pictures/Wallpapers/Cartographer-3d-1600x2560.png
 
 # i3 config file (v4)
 #
@@ -157,9 +157,14 @@ bindsym $mod+b workspace back_and_forth
 
 # Special keys
 # Volume
+# ALSA
 #bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 #bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 #bindsym XF86AudioMute exec amixer -q set Master toggle
+# Pulseaudio
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 1 +10%
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 1 -- -10%
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 1 toggle
 
 # Monitor
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20
