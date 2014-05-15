@@ -1,0 +1,29 @@
+#!/bin/bash
+
+DIR=$1
+
+if [ -z $DIR ]
+then
+    DIR=$(pwd)
+    fi
+
+# Ensure correct path to executables
+SUDO=$(which sudo)
+CHGRP=$(which chgrp)
+CHOWN=$(which chown)
+CHMOD=$(which chmod)
+FIND=$(which find)
+
+# Set devel to be the group for everything in the site.
+$SUDO $CHGRP -R devel $DIR
+
+# Make www-data the owner of any files directories.  It may be more prudent to actually cd to the files directory and call chown manually.
+$SUDO $FIND $DIR -type d -wholename '*/sites/*/files' -exec $CHOWN -R www-data {} \;
+
+# Set permissions for all directories to drwxrwsr-x
+$SUDO $FIND $DIR -type d -exec $CHMOD 2775 {} \;
+
+# Set permissions for all files to -rw-rw-r--
+$SUDO $FIND $DIR -type f -exec $CHMOD 664 {} \;
+
+# DONE!
