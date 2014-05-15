@@ -4,8 +4,8 @@ DIR=$1
 
 if [ -z $DIR ]
 then
-    DIR=$(pwd)
-    fi
+    DIR=${PWD}
+fi
 
 # Ensure correct path to executables
 SUDO=$(which sudo)
