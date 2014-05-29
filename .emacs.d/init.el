@@ -4,8 +4,15 @@
 
 (message "* --[ Loading my init.el ]--")
 
-; Recolor the minibuffer prompt so it's more readable.
+; Dired is initialized poorly before it's run.  Load it so we can set the color of directories.
+(load-library "dired")
+
+; Get rid of that horrible dark blue.
+; Note: Colors assume a 256 color terminal.
 (set-face-foreground 'minibuffer-prompt "#6495ed")
+(set-face-foreground 'dired-directory "#6495ed" )
+(set-face-attribute 'font-lock-function-name-face nil :foreground "#6495ed")
+
 ; Uncomment the following line if comments are coming out with silly colors.  Can replace color with hex code.
 ;(set-face-foreground 'font-lock-comment-face "red")
 
@@ -21,8 +28,11 @@
 (setq require-final-newline t)
 (setq js-indent-level 2)
 
+; Set socket dir for emacs server
+;(setq server-socket-dir (format "/tmp/greg/emacs%d" (user-uid)))
+
 ; Dired options
-(setq dired-listing-switches "-lah")
+(setq dired-listing-switches "-lah --group-directories-first")
 (setq wdired-allow-to-change-permissions t)
 
 ; Autoload php-mode.el
