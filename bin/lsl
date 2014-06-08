@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lah --color "$@"
+ls -lah --group-directories-first --color "$@"
