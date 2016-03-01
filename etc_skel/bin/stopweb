@@ -1,0 +1,4 @@
+#!/bin/bash
+sudo systemctl  stop httpd
+sudo systemctl  stop mysqld
+sudo systemctl  stop postgresql

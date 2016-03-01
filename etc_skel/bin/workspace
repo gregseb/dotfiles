@@ -1,0 +1,36 @@
+RSYNC=$(which rsync)
+
+if [ "$2" = "--del" ] || [ "$2" = "-d" ]; then
+    DEL_FLAG="--del"
+else
+    DEL_FLAG=""
+fi
+
+function pull {
+
+
+    $($RSYNC -e 'ssh -p 2275' -avxzP $DEL_FLAG greg@seabass-web.com:/home/greg/workspace/ /home/greg/workspace)
+}
+
+function push {
+        $($RSYNC -e 'ssh -p 2275' -avxzP $DEL_FLAG /home/greg/workspace/ greg@seabass-web.com:/home/greg/\|
+workspace)
+}
+
+case "$1" in
+     pull)
+	pull
+	;;
+
+     push)
+	push
+	;;
+
+     diff)
+        echo "$RSYNC"
+	;;
+
+     *)
+        echo $"Usage: $0 {pull|push|diff}"
+        exit 1
+esac

@@ -1,0 +1,2 @@
+#!/bin/bash
+sudo /usr/bin/clamscan -r -i --exclude-dir='^/sys|^/proc|^/dev|^/lib|^/bin|^/sbin' /

@@ -1,0 +1,5 @@
+#!/bin/bash
+# find and list all emacs backup files in the entire system
+# recommended to use this before removing to verify that no other files have snuck in.
+cd /
+sudo find . | grep '~$'
