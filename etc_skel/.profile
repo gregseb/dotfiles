@@ -21,6 +21,7 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-WORKON_HOME="/data/ve"
+# Uncomment this if you want to store your virtualenvs somewhere other than ~/.virtualenv
+# WORKON_HOME="/data/ve"
 
 . /usr/local/bin/virtualenvwrapper.sh
