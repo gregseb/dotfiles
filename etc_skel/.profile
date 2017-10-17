@@ -24,4 +24,5 @@ fi
 # Uncomment this if you want to store your virtualenvs somewhere other than ~/.virtualenv
 # WORKON_HOME="/data/ve"
 
+VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3"
 . /usr/local/bin/virtualenvwrapper.sh
